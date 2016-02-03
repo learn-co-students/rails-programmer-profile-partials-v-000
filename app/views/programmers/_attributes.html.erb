@@ -1,0 +1,5 @@
+<% attrs.each do |attr| %>
+  <p>
+  <strong><%= attr.class.name.gsub('_', ' ').titleize %>:</strong> <%= attr %><br>
+  </p>
+<% end %>

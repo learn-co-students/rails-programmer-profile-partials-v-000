@@ -11,8 +11,8 @@
   </div>
 
   <div class="col-md-9 programmer-info">
-    <%= @programmer.instance_variables.select{|var| var == :home_country || var == :quote || var == :claim_to_fame}.each do |sym| %>
-      <%= render 'attribute', locals: {attribute_sym: sym} %>
+    <%= @programmer.attributes_for_show.each do |sym| %>
+      <%= render 'attribute', locals: {sym: sym, programmer:@programmer} %>
     <% end %>
 
     <p>

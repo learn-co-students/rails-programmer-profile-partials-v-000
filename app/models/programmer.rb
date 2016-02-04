@@ -1,6 +1,6 @@
 class Programmer < ActiveRecord::Base
   def attributes_for_show
-    self.instance_variables.select{|var| var == :home_country || var == :quote || var == :claim_to_fame}
+    %i(home_country quote claim_to_fame)
   end
 
   def attribute_label(attribute)

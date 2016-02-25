@@ -1,0 +1,2 @@
+-ruby version is fixed to 2.2.0 for some reason
+  -deleted gemfile.lock.  would have had to reinstall bundler

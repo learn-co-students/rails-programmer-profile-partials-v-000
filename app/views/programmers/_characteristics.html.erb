@@ -1,0 +1,5 @@
+<% attributes[5..7].each do |attribute| %>
+  <p>
+  <strong><%= attribute[0].split('_').map(&:capitalize).join(' ') %>:</strong> <%= attribute[1] %><br>
+  </p>
+<% end %>

@@ -1,0 +1,5 @@
+<% programmer.attr_for_display.each do |title| %>
+<p>
+<strong><%= programmer.send(:info, title ) %></strong> <%= programmer[title] %><br>
+</p>
+<% end %>

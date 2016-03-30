@@ -49,13 +49,13 @@ group :test, :development do
   gem 'simplecov'
   gem 'database_cleaner'
   gem 'sqlite3'
-  gem 'pry'
+  gem 'pry-rails'
+  gem 'learn-co'
   gem 'guard-rspec', require: false
   gem 'thin'
 end
 
 group :production do
-  gem 'pg'
   gem 'google-analytics-rails'
   gem 'rails_12factor'
 end

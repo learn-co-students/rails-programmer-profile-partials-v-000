@@ -1,0 +1,8 @@
+<% desired_attributes = ['quote', 'home_country', 'claim_to_fame'] %>
+<% attributes_hash.each do |key, val| %>
+  <% if desired_attributes.include?(key) %>
+    <p>
+    <%= key.titleize %>: <%= val %>
+    </p>
+  <% end %>
+<% end %>

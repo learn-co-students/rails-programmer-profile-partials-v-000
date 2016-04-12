@@ -13,6 +13,7 @@
   <div class="col-md-9 programmer-info">
 
     <% @programmer.attributes.each_pair do |key, value| %>
+      <%binding.pry%>
       <%= render partial: 'attribute', locals: {:key => key, :value => value}  %>
     <% end %>
 

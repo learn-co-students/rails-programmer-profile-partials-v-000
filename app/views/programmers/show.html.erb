@@ -1,3 +1,4 @@
+
 <%= link_to '<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>'.html_safe, root_path %>
 
 <h3>
@@ -12,9 +13,11 @@
 
   <div class="col-md-9 programmer-info">
 
-    <% @programmer.locals_hash.each do |key, value| %>
-      <%= render partial: "attribute", locals: {key: key, value: value} %>
-    <% end %>
+  <!-- call #locals_hash on @programmer instance -->
+  <%= @programmer.locals_hash.each do |key, value| %>
+  <!-- send resulting k-v pairs of #locals_hash to the partial -->
+    <%= render partial:"attribute", locals: {key: key, value: value}%>
+  <% end %>  
 
     <p>
     <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
@@ -22,4 +25,3 @@
 
   </div>
 </div>
-

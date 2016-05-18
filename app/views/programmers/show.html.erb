@@ -12,9 +12,9 @@
 
   <div class="col-md-9 programmer-info">
 
-    <% @programmer.attributes.each do |attr_name, attr_value| %>
-    <%= render partial: "programmers/attribute", locals: {attribute: attr_name} %>
-    <%end%>
+    <% @programmer.public_attributes.each do |attr_name, attr_value| %>
+      <%= render partial: "programmers/attribute", locals: {attribute: attr_name} %>
+      <%end%>
     <p>
       <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
     </p>

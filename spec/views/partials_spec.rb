@@ -4,7 +4,7 @@ require 'spec_helper'
 describe "the navbar partial" do
   it "renders the navbar correctly" do
     render "layouts/navbar"
-   
+
     expect(response).to include('Programmers We L<span class="glyphicon glyphicon-heart"></span>ve')
   end
 end
@@ -44,11 +44,11 @@ xdescribe "the attribute partial" do
 
   it "renders any attribute of the programmer" do
       view.lookup_context.prefixes = %w[programmers]
-      assign(:programmer, programmer)  
+      assign(:programmer, programmer)
       render :template => "programmers/show.html.erb"
       expect(response).not_to include("programmer.send(attribute)")
       expect(response).not_to include("programmer.home_country")
-    
+
   end
 
 end

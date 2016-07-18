@@ -1,0 +1,13 @@
+  <li>
+      <div>
+        <h3>
+          <%= link_to programmer.name, programmer %> | <%= formatted_date(programmer.birth_date) %> - <%= formatted_date(programmer.death_date) %>
+        </h3>
+
+        <div>
+            <%= image_tag programmer.image, height: '250px', class:"profile-image" %>
+        </div>
+      </div>
+    </a>
+   
+  </li><br>

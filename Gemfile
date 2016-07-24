@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'eventmachine', '~> 1.2', '>= 1.2.0.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use SCSS for stylesheets

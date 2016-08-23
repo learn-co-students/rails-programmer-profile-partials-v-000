@@ -10,24 +10,16 @@
     <%= image_tag @programmer.image, height: '250px', class:"profile-image" %>
   </div>
 
-  <div class="col-md-9 programmer-info">
+  <div class="programmer-info col-md-9">
+    <%= render partial: 'attribute', locals: {title: "home_country".titleize, value: @programmer.home_country} %>
+    <%= render partial: "attribute", locals: {title: "quote".titleize, value: @programmer.quote} %>
+    <%= render partial: "attribute", locals: {title: "claim_to_fame".titleize, value: @programmer.claim_to_fame} %>
+
+    <%= render @programmer %>
 
     <p>
-    <strong>Home Country:</strong> <%= @programmer.home_country %><br>
+      <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
     </p>
 
-    <p>
-    <strong>Quote:</strong> <%= @programmer.quote %><br>
-    </p>
-
-    <p>
-    <strong>Claim To Fame:</strong> <%= @programmer.claim_to_fame %>
-    </p>
-
-    <p>
-    <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
-    </p>
-
-  </div>
-</div>
-
+  </div><!-- /.programmer-info -->
+</div><!-- /.row -->

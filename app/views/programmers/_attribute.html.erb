@@ -1,0 +1,20 @@
+<div class="row jumbotron">
+
+  <div class="col-md-3">
+    <%= image_tag programmer.image, height: '250px', class:"profile-image" %>
+  </div>
+
+  <div class="col-md-9 programmer-info">
+
+
+
+  <% programmer.attributes.each_pair  do |name, value| %>
+
+    <p>
+    <strong><%= name.humanize %>:</strong> <%= value %><br>
+    </p>
+    <% end %>
+
+  </div>
+</div>
+

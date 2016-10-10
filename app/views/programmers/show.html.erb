@@ -11,8 +11,10 @@
   </div>
 
   <div class="col-md-9 programmer-info">
-
-    <%= render :partial => 'attribute', :locals => {home_country: @programmer.home_country, quote: @programmer.quote, claim_to_fame: @programmer.claim_to_fame} %>
+  
+  <% @programmer.attributes.each do |attribute, value|%>
+    <%= render :partial => 'attribute', :locals => {attribute_name: attribute, attribute: value} %>
+    <%end%>
 
     <p>
     <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>

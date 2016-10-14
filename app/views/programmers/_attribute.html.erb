@@ -1,0 +1,5 @@
+<% Programmer.column_names.each do |attribute| %>
+  <p>
+    <strong><%= attribute.titleize %>:</strong> <%= programmer.send(attribute) %><br>
+  </p>
+<% end %>

@@ -1,0 +1,7 @@
+<% tag_array = attribute.to_s.split("_").collect do |word|
+		word.capitalize
+	end
+%>
+<p>
+<strong><%=tag_array.join(" ") + ":"%></strong> <%= programmer.send(attribute) %><br>
+</p>

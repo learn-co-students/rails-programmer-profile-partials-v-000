@@ -41,11 +41,11 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'factory_girl_rails', '~> 4.5'
+  gem 'factory_girl_rails'
   gem 'simplecov'
   gem 'database_cleaner'
   gem 'pry'
-  gem 'guard-rspec', require: false
+  # gem 'guard-rspec', require: false
   gem 'thin'
 end
 

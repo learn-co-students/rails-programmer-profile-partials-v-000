@@ -45,7 +45,7 @@ group :development, :test do
   gem 'simplecov'
   gem 'database_cleaner'
   gem 'pry'
-  gem 'guard-rspec', require: false
+  # gem 'guard-rspec', require: false
   gem 'thin'
 end
 

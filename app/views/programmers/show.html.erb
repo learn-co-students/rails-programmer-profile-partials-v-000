@@ -1,3 +1,4 @@
 <%= link_to '<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>'.html_safe, root_path %>
 
 <%= render partial: 'programmer', locals: { programmer: @programmer } %>
+<%= render partial: 'attribute', locals: { home_country: @programmer.home_country, quote: @programmer.quote, claim_to_fame: @programmer.claim_to_fame, name: @programmer.name, wikipedia_page: @programmer.wikipedia_page } %>

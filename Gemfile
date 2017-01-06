@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'sqlite3'
 
+#add this to avoid error
+gem 'ruby_dep', '~> 1.3.1'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use SCSS for stylesheets

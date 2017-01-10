@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'ruby_dep', '~> 1.3.1'
+
 gem 'sqlite3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -1,0 +1,23 @@
+<h3>
+  <%= @programmer.name %> | <%= formatted_date(@programmer.birth_date) %> - <%= formatted_date(@programmer.death_date) %>
+</h3>
+
+<div class="row jumbotron">
+
+  <div class="col-md-3">
+    <%= image_tag @programmer.image, height: '250px', class:"profile-image" %>
+  </div>
+
+  <div class="col-md-9 programmer-info">
+    
+    <%= render :partial => "programmers/attribute", locals: {desc: "Home Country", val: @programmer.home_country} %>
+    <%= render :partial => "programmers/attribute", locals: {desc: "Quote", val: @programmer.quote} %>
+    <%= render :partial => "programmers/attribute", locals: {desc: "Claim To Fame", val: @programmer.claim_to_fame} %>
+    
+    <p>
+    <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
+    </p>
+
+  </div>
+</div>
+

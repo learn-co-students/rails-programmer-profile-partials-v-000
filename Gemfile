@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-
 gem 'sqlite3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -47,6 +46,7 @@ group :development, :test do
   gem 'pry'
   gem 'guard-rspec', require: false
   gem 'thin'
+  gem 'learn-co'
 end
 
 # Access an IRB console on exception pages or by using <%= console %> in views

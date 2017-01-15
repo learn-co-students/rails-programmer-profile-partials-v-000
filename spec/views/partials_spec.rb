@@ -13,7 +13,7 @@ describe "the programmer partial" do
   let(:programmer) { FactoryGirl.create(:programmer) }
 
   before do
-    render "programmers/programmer", :programmer => programmer
+    render "programmers/programmer", :@programmer => programmer
   end
 
   it "renders the programmer's name" do
@@ -39,7 +39,7 @@ describe "the programmers index page" do
 end
 
 # BONUS: Create a partial that renders a single attribute of a programmer
-xdescribe "the attribute partial" do
+describe "the attribute partial" do
   let(:programmer) { FactoryGirl.create(:programmer) }
 
   it "renders any attribute of the programmer" do

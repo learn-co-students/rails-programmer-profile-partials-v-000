@@ -5,5 +5,6 @@ class ProgrammersController < ApplicationController
 
   def show
     @programmer = Programmer.find(params[:id])
+    @attributes = %w(home_country quote claim_to_fame)
   end
 end

@@ -1,5 +1,7 @@
+ruby RUBY_VERSION
 source 'https://rubygems.org'
 
+gem 'listen', '~> 3.0.8'
 gem 'sqlite3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

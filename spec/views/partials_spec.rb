@@ -33,22 +33,22 @@ describe "the programmers index page" do
     expect(programmers_index).to_not include(".each")
   end
 
-  #  it "uses shorthand syntax for rendering the collection of programmers" do
-  #   #  expect(programmers_index).to include("<%= render @programmers %>")
-  #  end
+    it "uses shorthand syntax for rendering the collection of programmers" do
+      expect(programmers_index).to include("<%= render @programmers %>")
+   end
 end
 
 # BONUS: Create a partial that renders a single attribute of a programmer
-xdescribe "the attribute partial" do
-  let(:programmer) { FactoryGirl.create(:programmer) }
+# xdescribe "the attribute partial" do
+#   let(:programmer) { FactoryGirl.create(:programmer) }
+# 
+#   it "renders any attribute of the programmer" do
+#       view.lookup_context.prefixes = %w[programmers]
+#       assign(:programmer, programmer)
+#       render :template => "programmers/show.html.erb"
+#       expect(response).not_to include("programmer.send(attribute)")
+#       expect(response).not_to include("programmer.home_country")
+# 
+#   end
 
-  it "renders any attribute of the programmer" do
-      view.lookup_context.prefixes = %w[programmers]
-      assign(:programmer, programmer)
-      render :template => "programmers/show.html.erb"
-      expect(response).not_to include("programmer.send(attribute)")
-      expect(response).not_to include("programmer.home_country")
-
-  end
-
-end
+# end

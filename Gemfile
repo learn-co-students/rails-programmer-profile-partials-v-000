@@ -20,6 +20,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+#gem 'capybara', '~> 2.10.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -58,3 +59,10 @@ group :production do
 end
 
 gem 'bootstrap-sass', '~> 3.1.1'
+
+# if ENV['CI']
+#   ruby RUBY_VERSION
+# else
+#   # TODO: read from the gemspec somehow? (Apparently Bundler will do that in Bundler 2.x)
+#   ruby IO.read('.ruby-version') rescue RUBY_VERSION
+# end

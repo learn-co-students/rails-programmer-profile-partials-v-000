@@ -12,6 +12,8 @@
 
   <div class="col-md-9 programmer-info">
 
+    <render partial: 'attribute', locals: {label: "Home Country", programmer: @programmer, attribute: :home_country} %>
+
     <p>
     <strong>Home Country:</strong> <%= @programmer.home_country %><br>
     </p>
@@ -30,4 +32,3 @@
 
   </div>
 </div>
-

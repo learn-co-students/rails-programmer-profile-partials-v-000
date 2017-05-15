@@ -11,18 +11,12 @@
   </div>
 
   <div class="col-md-9 programmer-info">
+  <% attribute = [@programmer.home_country, @programmer.quote, @programmer.claim_to_fame] %>
 
-    <p>
-    <strong>Home Country:</strong> <%= @programmer.home_country %><br>
-    </p>
-
-    <p>
-    <strong>Quote:</strong> <%= @programmer.quote %><br>
-    </p>
-
-    <p>
-    <strong>Claim To Fame:</strong> <%= @programmer.claim_to_fame %>
-    </p>
+  <%= render partial: 'attribute', locals: {attribute: attribute[0]} %>
+  <%= render partial: 'attribute', locals: {attribute: attribute[1]} %>
+  <%= render partial: 'attribute', locals: {attribute: attribute[2]} %>
+    
 
     <p>
     <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
@@ -31,3 +25,4 @@
   </div>
 </div>
 
+   

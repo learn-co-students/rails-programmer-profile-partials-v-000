@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'tux'
 gem 'sqlite3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

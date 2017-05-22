@@ -1,0 +1,5 @@
+<% titles.each do |title| %>
+  <p>
+    <strong><%= title.titleize %>:</strong> <%= programmer.send(title) %><br>
+  </p>
+<% end %>

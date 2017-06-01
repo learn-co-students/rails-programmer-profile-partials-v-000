@@ -11,8 +11,10 @@
   </div>
 
   <div class="col-md-9 programmer-info">
-
-    <%= render partial: 'attribute', :collection => @prgrammers, size: 30 %>
+    <% programmer_attributes = ['home_country', 'quote', 'claim_to_fame'] %>
+    <% programmer_attributes.each do |attr| %>
+      <%= render partial: 'attribute', locals: {title: attr, value: @programmer.send(attr)} %>
+    <% end %>
     
     <p>
     <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>

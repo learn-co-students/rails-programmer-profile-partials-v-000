@@ -1,7 +1,3 @@
-<%= link_to '<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>'.html_safe, root_path %>
-
-<%= render partial: 'shared/programmer_attr/header', locals: {programmer: @programmer } %>
-
 <div class="row jumbotron">
   <%= render partial: 'shared/programmer_attr/image', locals: {programmer: @programmer } %>
   <div class="col-md-9 programmer-info">  
@@ -11,4 +7,3 @@
     <%= render partial: 'shared/programmer_attr/about', locals: {programmer: @programmer } %>  
   </div>
 </div>
-

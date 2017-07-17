@@ -5,5 +5,6 @@ class ProgrammersController < ApplicationController
 
   def show
     @programmer = Programmer.find(params[:id])
+    @atts = ["Home Country", "Quote", "Claim to Fame"]
   end
 end

@@ -14,13 +14,6 @@
 
 
     <%= render partial: 'attribute', collection: @programmer.class.columns[1..4], locals: {programmer: @programmer} %>
-    <!-- <p>
-    <strong>Quote:</strong> <%= @programmer.quote %><br>
-    </p>
-
-    <p>
-    <strong>Claim To Fame:</strong> <%= @programmer.claim_to_fame %>
-    </p> -->
 
     <p>
     <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>

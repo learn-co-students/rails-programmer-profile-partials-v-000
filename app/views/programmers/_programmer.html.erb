@@ -1,0 +1,12 @@
+<%= link_to programmer_path(programmer) do %>
+  <div class="list-group-item programmer-item">
+    <%= image_tag programmer.image, width: '70px' %>
+    <ul>
+    <% programmer.attributes.each do |key, value| %>
+      <% unless key.match(/\A(id|image|created_at|updated_at)\z/i) %>
+      <li><%= "#{key.split("_").collect(&:capitalize).join(" ")}: #{value}" %></li>
+      <% end %>
+    <% end %>
+    </ul>
+  </div>
+<% end %>

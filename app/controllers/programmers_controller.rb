@@ -1,4 +1,5 @@
 class ProgrammersController < ApplicationController
+
   def index
     @programmers = Programmer.all
   end
@@ -6,4 +7,5 @@ class ProgrammersController < ApplicationController
   def show
     @programmer = Programmer.find(params[:id])
   end
+  
 end

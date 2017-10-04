@@ -1,3 +1,5 @@
 <%= render( partial: 'programmers/programmer', locals: { programmer: @programmer }) %>
 
-<% # What NOT to do: render( 'programmers/programmer', locals: { programmer: @programmer } ) %>
+<% # What NOT to do - label one argument but not the others: render( 'programmers/programmer', locals: { programmer: @programmer } )
+  # When not labeled, the order of arguments matter. For the render function, the expected order of arguments would be render(path, local variables hash)
+%>

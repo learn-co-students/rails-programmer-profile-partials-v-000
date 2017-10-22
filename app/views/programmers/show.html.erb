@@ -11,9 +11,9 @@
   </div>
 
   <div class="col-md-9 @programmer-info">
-    <%= render partial: 'attribute', locals: {attr: "Home Country", value: @programmer.home_country} %>
-    <%= render partial: 'attribute', locals: {attr: "Quote", value: @programmer.quote} %>
-    <%= render partial: 'attribute', locals: {attr: "Claim To Fame", value: @programmer.claim_to_fame} %>
+    <%= render partial: 'attribute', locals: {attr: "Home Country", programmer: @programmer} %>
+    <%= render partial: 'attribute', locals: {attr: "Quote", programmer: @programmer} %>
+    <%= render partial: 'attribute', locals: {attr: "Claim To Fame", programmer: @programmer} %>
     <p>
     <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
     </p>

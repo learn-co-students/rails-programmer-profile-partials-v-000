@@ -7,8 +7,4 @@ class ProgrammersController < ApplicationController
     @programmer = Programmer.find(params[:id])
   end
 
-  private
-  def strongify(str)
-    str.split('_').collect(&:capitalize).join(" ")
-  end
 end

@@ -38,7 +38,7 @@ describe "the programmers index page" do
   end
 end
 
-# BONUS: Create a partial that renders a single attribute of a programmer
+# # BONUS: Create a partial that renders a single attribute of a programmer
 # xdescribe "the attribute partial" do
 #   let(:programmer) { FactoryGirl.create(:programmer) }
 
@@ -49,6 +49,6 @@ end
 #       expect(response).not_to include("programmer.send(attribute)")
 #       expect(response).not_to include("programmer.home_country")
     
-#   end
+  # end
 
-end
+# end

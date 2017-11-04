@@ -1,5 +1,5 @@
 <% programmer.attributes.each do |attribute| %>
   <p>
-    <strong><%= title(attribute) %>: </strong><%= programmer.send(attribute) %>
+    <strong><%= attribute.titleize %>: </strong><%= programmer.send(attribute) %>
   </p>
 <% end %>

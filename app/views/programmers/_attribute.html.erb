@@ -1,0 +1,5 @@
+<% programmer.attributes.each do |attribute| %>
+  <p>
+    <strong><%= programmer.title(attribute) %>: </strong><%=programmer.send(attribute)%>
+  </p>
+<% end %>

@@ -12,22 +12,16 @@
 
   <div class="col-md-9 programmer-info">
 
-    <p>
-    <strong>Home Country:</strong> <%= @programmer.home_country %><br>
-    </p>
+    
+    <% [:home_country, :quote, :claim_to_fame].each do |attr| %>
+      <%= render partial: 'attribute', locals: {title: attr, value: @programmer.send(attr)} %>
+    <% end %>  
 
-    <p>
-    <strong>Quote:</strong> <%= @programmer.quote %><br>
-    </p>
-
-    <p>
-    <strong>Claim To Fame:</strong> <%= @programmer.claim_to_fame %>
-    </p>
 
     <p>
     <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
     </p>
 
-  </div>
+  </div>  
 </div>
 

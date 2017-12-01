@@ -1,3 +1,3 @@
 <p>
-<strong><%= attribute[0].split('_').join(' ').titleize %>:</strong> <%= attribute[1] %><br>
+<strong><%= attribute.titleize %>:</strong> <%= @programmer.send(attribute) %><br>
 </p>

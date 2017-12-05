@@ -5,5 +5,6 @@ class ProgrammersController < ApplicationController
 
   def show
     @programmer = Programmer.find(params[:id])
+    @attributes = @programmer.attributes.keys
   end
 end

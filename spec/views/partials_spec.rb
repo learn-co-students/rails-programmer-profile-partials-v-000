@@ -49,6 +49,6 @@ describe "the attribute partial" do
       expect(response).not_to include("programmer.send(attribute)")
       expect(response).not_to include("programmer.home_country")
 
-  end if false
+  end
 
 end

@@ -12,8 +12,9 @@
 
   <div class="col-md-9 programmer-info">
 
-    <p>
-    <strong>Home Country:</strong> <%= @programmer.home_country %><br>
+    <%= render partial: "programmers/attribute", collection: @programmer %>
+
+    <p><strong>Home Country:</strong> <%= @programmer.home_country %><br>
     </p>
 
     <p>
@@ -30,4 +31,3 @@
 
   </div>
 </div>
-

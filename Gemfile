@@ -46,7 +46,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'pry'
   gem 'guard-rspec', require: false
-  gem 'thin'
+  gem 'thin', '~> 1.7', '>= 1.7.2'
 end
 
 # Access an IRB console on exception pages or by using <%= console %> in views

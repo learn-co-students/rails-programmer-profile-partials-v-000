@@ -1,0 +1,24 @@
+
+<% array = ["home_country", "quote", "claim_to_fame"] %>
+<p>
+  <% array.each do |attriute| %>
+    <strong><%= attribute %>: </strong><%= programmer.send(:home_country) %><br>
+  <% end %>
+</p>
+
+
+
+
+<!-- t.string   "name"
+t.string   "home_country"
+t.string   "quote"
+t.string   "claim_to_fame"
+
+
+class Rubyist
+  def welcome(*args)
+    "Welcome " + args.join(' ')
+  end
+end
+obj = Rubyist.new
+puts(obj.send(:welcome, "famous", "Rubyists"))   # => Welcome famous Rubyists

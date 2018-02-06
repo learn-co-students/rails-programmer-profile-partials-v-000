@@ -1,8 +1,6 @@
 <%= link_to '<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>'.html_safe, root_path %>
 
-<h3>
-  <%= @programmer.name %> | <%= formatted_date(@programmer.birth_date) %> - <%= formatted_date(@programmer.death_date) %>
-</h3>
+<%= render: "programmer", programmer: @programmer %>
 
 <div class="row jumbotron">
 
@@ -30,4 +28,3 @@
 
   </div>
 </div>
-

@@ -5,5 +5,6 @@ class ProgrammersController < ApplicationController
 
   def show
     @programmer = Programmer.find(params[:id])
+    @attr_array = []
   end
 end

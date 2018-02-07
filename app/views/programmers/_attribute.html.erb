@@ -1,0 +1,7 @@
+<% @programmer.attributes.each do |key, value| %>
+<% if ["home_country", "quote", "claim_to_fame"].include?(key) %>
+<p>
+    <strong><%= key.gsub("_", " ").titleize %>:</strong> <%= value %><br>
+</p>
+<% end %>
+<% end %>

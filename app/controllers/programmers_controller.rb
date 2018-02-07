@@ -1,4 +1,5 @@
 class ProgrammersController < ApplicationController
+	layout "application"
   def index
     @programmers = Programmer.all
   end

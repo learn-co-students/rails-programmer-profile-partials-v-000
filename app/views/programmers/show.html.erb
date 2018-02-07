@@ -13,16 +13,17 @@
   <div class="col-md-9 programmer-info">
 
     <p>
-    <strong>Home Country:</strong> <%= @programmer.home_country %><br>
+    <%= render partial: 'attribute', locals: {attribute: "Home Country", programmer: @programmer} %>
     </p>
 
     <p>
-    <strong>Quote:</strong> <%= @programmer.quote %><br>
+    <%= render partial: 'attribute', locals: {attribute: "Quote", programmer: @programmer} %>
     </p>
 
     <p>
-    <strong>Claim To Fame:</strong> <%= @programmer.claim_to_fame %>
+    <%= render partial: 'attribute', locals: {attribute: "Claim to Fame", programmer: @programmer} %>
     </p>
+
 
     <p>
     <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
@@ -30,4 +31,3 @@
 
   </div>
 </div>
-

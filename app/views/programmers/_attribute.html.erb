@@ -1,0 +1,5 @@
+<% programmer.attributes.slice('home_country', 'quote', 'claim_to_fame').keys.each do |key| %>
+    <p>
+        <strong><%= key.to_s.split('_').map {|word| word.capitalize}.join(' ')%>:</strong> <%= programmer.send(key) %><br>
+    </p>
+<% end %>

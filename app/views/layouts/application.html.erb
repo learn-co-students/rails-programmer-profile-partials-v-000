@@ -9,18 +9,13 @@
 </head>
 <body>
 
+  <div class="container">
 
-<div class="container">
+    <%= render 'layouts/navbar' %>
 
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="navbar-brand">
-      Programmers We L<span class="glyphicon glyphicon-heart"></span>ve
-    </div>
-  </nav>
+    <%= yield %>
 
-  <%= yield %>
-
-</div>
+  </div>
 
 </body>
 </html>

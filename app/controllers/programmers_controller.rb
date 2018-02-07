@@ -1,4 +1,5 @@
 class ProgrammersController < ApplicationController
+ layout "navbar"
   def index
     @programmers = Programmer.all
   end

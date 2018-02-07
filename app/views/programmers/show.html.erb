@@ -1,4 +1,4 @@
-<%= link_to '<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>'.html_safe, root_path %>
+<%= render 'layouts/navbar' %>
 
 <h3>
   <%= @programmer.name %> | <%= formatted_date(@programmer.birth_date) %> - <%= formatted_date(@programmer.death_date) %>
@@ -12,17 +12,11 @@
 
   <div class="col-md-9 programmer-info">
 
-    <p>
-    <strong>Home Country:</strong> <%= @programmer.home_country %><br>
-    </p>
+    <%= render partial: 'attribute', locals: {label: 'Home Country:', programmer_attribute: @programmer.home_country} %>
 
-    <p>
-    <strong>Quote:</strong> <%= @programmer.quote %><br>
-    </p>
+    <%= render partial: 'attribute', locals: {label: 'Quotee:', programmer_attribute: @programmer.quote} %>
 
-    <p>
-    <strong>Claim To Fame:</strong> <%= @programmer.claim_to_fame %>
-    </p>
+    <%= render partial: 'attribute', locals: {label: 'Claim To Fame:', programmer_attribute: @programmer.claim_to_fame} %>
 
     <p>
     <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
@@ -30,4 +24,3 @@
 
   </div>
 </div>
-

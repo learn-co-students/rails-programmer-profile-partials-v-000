@@ -1,0 +1,18 @@
+<%= link_to programmer_path(programmer) do %>
+	<p class="list-group-item programmer-item">
+		<%= programmer.name %> | <%= formatted_date(programmer.birth_date) %> - <%= formatted_date(programmer.death_date) %>
+		<%= image_tag programmer.image, height: '250px', class:"profile-image" %>
+	</p>
+<% end %>
+
+
+<!-- <h3>
+  
+</h3>
+
+<div class="row jumbotron">
+
+<div class="col-md-3">
+
+</div>
+ -->

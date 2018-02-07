@@ -1,12 +1,10 @@
 <h1>Our Favorite Programmers</h1>
 
 <ul class="list-group">
-<% @programmers.each do |programmer| %>
-  <%= link_to programmer_path(programmer) do %>
+<%#= render partial: "programmer", collection: @programmers %><%#http://guides.rubyonrails.org/layouts_and_rendering.html, keyword: "collection"%>
+  <%= render @programmers %><%#http://guides.rubyonrails.org/layouts_and_rendering.html#using-partials, keyword "shorthand"%>
   <p class="list-group-item programmer-item">
-    <%= image_tag programmer.image, width: '70px' %>
-    <%= programmer.name %>
+    <%#= render "programmer" %>
   </p>
-  <% end %>
-<% end %>
+  <%# end %>
 </ul>

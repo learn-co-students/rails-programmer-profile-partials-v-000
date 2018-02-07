@@ -11,23 +11,8 @@
   </div>
 
   <div class="col-md-9 programmer-info">
-
-    <p>
-    <strong>Home Country:</strong> <%= @programmer.home_country %><br>
-    </p>
-
-    <p>
-    <strong>Quote:</strong> <%= @programmer.quote %><br>
-    </p>
-
-    <p>
-    <strong>Claim To Fame:</strong> <%= @programmer.claim_to_fame %>
-    </p>
-
-    <p>
-    <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
-    </p>
-
+    <%= render 'attribute', programmer: @programmer, attribute: 'home_country' %>
+    <%= render 'attribute', programmer: @programmer, attribute: 'quote' %>
+    <%= render 'attribute', programmer: @programmer, attribute: 'claim_to_fame' %>
   </div>
 </div>
-

@@ -1,0 +1,11 @@
+<% attributes = programmer.attributes.select do |hash| %>
+  <% hash if hash.include?('home_country') ||
+    hash.include?('quote') ||
+    hash.include?('claim_to_fame') %>
+<% end %>
+
+<% attributes.each do |k, v| %>
+  <p>
+    <strong><%= k.titleize%></strong><%= + ": " + v %>
+  </p>
+<% end %>

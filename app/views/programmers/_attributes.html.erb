@@ -1,0 +1,5 @@
+<% attributes.each do |attrib| %>
+	<p>
+		<strong><%= attrib %></strong> <%= @programmer.send(attrib.gsub(' ', '_').downcase.to_sym) %><br>
+	</p>
+<% end %>

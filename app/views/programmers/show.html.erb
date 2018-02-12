@@ -1,25 +1,17 @@
 <%= link_to '<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>'.html_safe, root_path %>
 
-<%= render "programmers/programmer", :programmer => programmer %>
+<%= render "programmer", :programmer => @programmer %>
 
+<div class="col-md-9 programmer-info">
 
-  <div class="col-md-9 programmer-info">
+   <%= render partial: "attribute", locals: {attribute_name: "Home Country", attribute_value: @programmer.home_country} %><br>
 
-    <p>
-    <strong>Home Country:</strong> <%= @programmer.home_country %><br>
-    </p>
+   <%= render partial: "attribute", locals: {attribute_name: "Quote", attribute_value: @programmer.quote} %><br>
 
-    <p>
-    <strong>Quote:</strong> <%= @programmer.quote %><br>
-    </p>
-
-    <p>
-    <strong>Claim To Fame:</strong> <%= @programmer.claim_to_fame %>
-    </p>
+   <%= render partial: "attribute", locals: {attribute_name: "Claim to Fame", attribute_value: @programmer.claim_to_fame} %>
 
     <p>
     <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
     </p>
 
-  </div>
 </div>

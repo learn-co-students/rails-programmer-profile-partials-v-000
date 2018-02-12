@@ -1,17 +1,17 @@
 <%= link_to '<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>'.html_safe, root_path %>
 
-<%= render "programmer", :programmer => @programmer %>
+<h3>
+  <%= @programmer.name %> | <%= formatted_date(@programmer.birth_date) %> - <%= formatted_date(@programmer.death_date) %>
+</h3>
 
-<div class="col-md-9 programmer-info">
+<div class="row jumbotron">
 
-   <%= render partial: "attribute", locals: {attribute_name: "Home Country", attribute_value: @programmer.home_country} %><br>
-
-   <%= render partial: "attribute", locals: {attribute_name: "Quote", attribute_value: @programmer.quote} %><br>
-
-   <%= render partial: "attribute", locals: {attribute_name: "Claim to Fame", attribute_value: @programmer.claim_to_fame} %>
-
-    <p>
-    <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
-    </p>
-
+  <div class="col-md-3">
+    <%= image_tag @programmer.image, height: '250px', class:"profile-image" %>
+  </div>
+  <div class="col-md-9 programmer-info">
+     <%= render partial: "attribute", locals: {attribute_name: "Home Country", attribute_value: @programmer.home_country} %><br
+     <%= render partial: "attribute", locals: {attribute_name: "Quote", attribute_value: @programmer.quote} %><br>
+     <%= render partial: "attribute", locals: {attribute_name: "Claim to Fame", attribute_value: @programmer.claim_to_fame} %>
+  </div>
 </div>

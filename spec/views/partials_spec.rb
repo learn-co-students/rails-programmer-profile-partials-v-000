@@ -4,7 +4,7 @@ require 'spec_helper'
 describe "the navbar partial" do
   it "renders the navbar correctly" do
     render "layouts/navbar"
-   
+
     expect(response).to include('Programmers We L<span class="glyphicon glyphicon-heart"></span>ve')
   end
 end
@@ -23,7 +23,6 @@ describe "the programmer partial" do
   it "renders the programmer's image" do
     expect(response).to include(programmer.image)
   end
-
 end
 
 describe "the programmers index page" do
@@ -39,16 +38,14 @@ describe "the programmers index page" do
 end
 
 # BONUS: Create a partial that renders a single attribute of a programmer
-xdescribe "the attribute partial" do
+describe "the attribute partial" do
   let(:programmer) { FactoryGirl.create(:programmer) }
 
   it "renders any attribute of the programmer" do
-      view.lookup_context.prefixes = %w[programmers]
-      assign(:programmer, programmer)  
-      render :template => "programmers/show.html.erb"
-      expect(response).not_to include("programmer.send(attribute)")
-      expect(response).not_to include("programmer.home_country")
-    
+    view.lookup_context.prefixes = %w[programmers]
+    assign(:programmer, programmer)
+    render :template => "programmers/show.html.erb"
+    expect(response).not_to include("programmer.send(attribute)")
+    expect(response).not_to include("programmer.home_country")
   end
-
 end

@@ -10,7 +10,7 @@ describe "the navbar partial" do
 end
 
 describe "the programmer partial" do
-  let(:programmer) { FactoryGirl.create(:programmer) }
+  let(:programmer) { FactoryBot.create(:programmer) }
 
   before do
     render "programmers/programmer", :programmer => programmer
@@ -39,8 +39,8 @@ describe "the programmers index page" do
 end
 
 # BONUS: Create a partial that renders a single attribute of a programmer
-xdescribe "the attribute partial" do
-  let(:programmer) { FactoryGirl.create(:programmer) }
+describe "the attribute partial" do
+  let(:programmer) { FactoryBot.create(:programmer) }
 
   it "renders any attribute of the programmer" do
       view.lookup_context.prefixes = %w[programmers]

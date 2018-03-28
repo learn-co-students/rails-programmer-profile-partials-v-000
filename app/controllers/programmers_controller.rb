@@ -1,6 +1,7 @@
 class ProgrammersController < ApplicationController
   def index
     @programmers = Programmer.all
+    render :layout => "navbar"
   end
 
   def show

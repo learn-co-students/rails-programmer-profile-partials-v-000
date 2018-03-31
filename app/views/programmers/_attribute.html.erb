@@ -1,0 +1,5 @@
+<% if attr_name ==  "home_country" || attr_name ==  "quote" || attr_name ==  "claim_to_fame"%>
+<p>
+  <strong><%= attr_name.titleize %></strong> <%= @programmer.send(attr_name) %><br>
+</p>
+<% end %>

@@ -8,6 +8,5 @@ class ProgrammersController < ApplicationController
   def show
     @programmer = Programmer.find(params[:id])
   end
-
   
 end

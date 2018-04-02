@@ -16,7 +16,7 @@
     <%= render partial: 'attribute', locals: {title: 'claim_to_fame', value: @programmer.claim_to_fame } %>
 
   <p>
-    <%= link_to "Learn more about #{@programmer.name}"  %>
+    <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
   </p>
 
   </div>

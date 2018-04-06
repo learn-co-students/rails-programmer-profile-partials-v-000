@@ -24,9 +24,7 @@
     <strong>Claim To Fame:</strong> <%= @programmer.claim_to_fame %>
     </p>
 
-    <p>
-    <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
-    </p>
+    <%= render partial: 'attribute', locals: {programmer: @programmer} %>
 
   </div>
 </div>

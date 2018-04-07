@@ -12,17 +12,11 @@
 
   <div class="col-md-9 programmer-info">
 
-    <p>
-    <strong>Home Country:</strong> <%= @programmer.home_country %><br>
-    </p>
+    <% method_names = ["quote", "home_country", "claim_to_fame"] %>
 
-    <p>
-    <strong>Quote:</strong> <%= @programmer.quote %><br>
-    </p>
-
-    <p>
-    <strong>Claim To Fame:</strong> <%= @programmer.claim_to_fame %>
-    </p>
+    <% method_names.each do |method_name| %>
+      <%= render partial: 'attribute', locals: {label: "#{method_name.gsub("_", " ").capitalize}", value: @programmer.send(method_name)} %>
+    <% end %>
 
     <p>
     <%= link_to "Learn more about #{@programmer.name}", @programmer.wikipedia_page, target: '_blank' %>
@@ -30,4 +24,3 @@
 
   </div>
 </div>
-

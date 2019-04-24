@@ -12,11 +12,8 @@
 
 <div class="container">
 
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="navbar-brand">
-      Programmers We L<span class="glyphicon glyphicon-heart"></span>ve
-    </div>
-  </nav>
+<%# below we have removed the navbar and placed it as a partial without locals in the same folder as this file.  The folder declaration in the below partial is not necessary but allows clarity%>
+<%= render 'layouts/navbar' %>
 
   <%= yield %>
 

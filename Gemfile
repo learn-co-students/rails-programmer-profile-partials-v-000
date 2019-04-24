@@ -42,6 +42,9 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'factory_girl_rails'
+# gem above did not work so had to add the bottom gem
+  gem 'factory_bot'
+
   gem 'simplecov'
   gem 'database_cleaner'
   gem 'pry'

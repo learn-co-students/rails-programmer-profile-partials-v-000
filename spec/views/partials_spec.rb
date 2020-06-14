@@ -38,7 +38,7 @@ describe "the programmers index page" do
   end
 end
 
-# BONUS: Create a partial that renders a single attribute of a programmer
+=begin BONUS: Create a partial that renders a single attribute of a programmer
 xdescribe "the attribute partial" do
   let(:programmer) { FactoryBot.create(:programmer) }
 
@@ -51,4 +51,6 @@ xdescribe "the attribute partial" do
 
   end
 
+
 end
+=end
